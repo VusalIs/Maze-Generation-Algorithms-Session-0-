@@ -28,9 +28,8 @@ function Cell(x, y) {
         else this.neighbors.push(undefined);
     };
 
-    this.getNextCell = function () {
-        var unvisitedNeighbors = this.neighbors.filter(neighbor => neighbor && !neighbor.visited);
-        return unvisitedNeighbors[Math.floor(Math.random() * unvisitedNeighbors.length)];
+    this.getUnvisitedNeighbors = function () {
+        return this.neighbors.filter(neighbor => neighbor && !neighbor.visited);
     };
 
     // If wall value is true, it will be shown

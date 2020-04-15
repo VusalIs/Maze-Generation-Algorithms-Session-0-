@@ -30,11 +30,6 @@ function removeWalls(current, next) {
         current.walls[3] = false;
         next.walls[1] = false;
     }
-    console.log('--------------');
-    console.log(current.y);
-    console.log(next.y);
-    console.log(current.x);
-    console.log(next.x);
 }
 
 function drawLine(pointStart, pointEnd) {

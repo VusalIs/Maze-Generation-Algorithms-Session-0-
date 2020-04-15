@@ -1,5 +1,6 @@
 function algo() {
-    var next = currentCell.getNextCell();
+    var unvisitedNeighbors = currentCell.getUnvisitedNeighbors();
+    var next = unvisitedNeighbors[Math.floor(Math.random() * unvisitedNeighbors.length)];
     if (next) {
         stack.push(currentCell);
         next.visited = true;
