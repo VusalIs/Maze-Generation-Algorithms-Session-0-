@@ -3,6 +3,7 @@
     <head>
         <title></title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript" src="depth-first-search.js"></script>
         <script type="text/javascript" src="Cell.js"></script>
         <script type="text/javascript" src="Draw.js"></script>
         <script type="text/javascript" src="Setup.js"></script>
@@ -42,44 +43,30 @@
         <div id="input-fields">
             <form class="container">
                 <div class="row">
-                    <div class="form-group col-3">
-                        <label for="algorithm">Choose which algorithm you want to use</label>
-                        <select class="form-control" id="algorithm">
-                            <option selected>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                        </select>
-                    </div>
-                    <div class="form-group col-3">
+                    <div class="form-group col-sm">
                         <label for="border-color">Color of borders</label><br />
                         <input type="color" id="border-color" name="border-color" value="#008080" /><br />
                     </div>
-                    <div class="form-group col-3">
+                    <div class="form-group col-sm">
                         <label for="visited-color">Color of visited cells</label><br />
                         <input type="color" id="visited-color" name="visited-color" value="#5e106d" /><br />
                     </div>
-                    <div class="form-group col-3">
+                    <div class="form-group col-sm">
                         <label for="current-color">Color of current cell</label><br />
                         <input type="color" id="current-color" name="current-color" value="#4eb2af" /><br />
                     </div>
                 </div>
                 <div class="row">
-                    <div class="form-group col-3">
-                        <label for="cell-size">Cell size</label>
-                        <input type="number" class="form-control" id="cell-size" />
-                    </div>
-                    <div class="form-group col-3">
-                        <label for="map-width">Map width</label>
+                    <div class="form-group col-sm">
+                        <label for="map-width">Map width(Default: 500)</label>
                         <input type="number" class="form-control" id="map-width" />
                     </div>
-                    <div class="form-group col-3">
-                        <label for="map-height">Map height</label>
+                    <div class="form-group col-sm">
+                        <label for="map-height">Map height(Default: 500)</label>
                         <input type="number" class="form-control" id="map-height" />
                     </div>
-                    <div class="form-group col-3">
-                        <label for="interval-time">Interval</label>
+                    <div class="form-group col-sm">
+                        <label for="interval-time">Interval(Default: 200)</label>
                         <input type="number" class="form-control" id="interval-time" />
                     </div>
                 </div>

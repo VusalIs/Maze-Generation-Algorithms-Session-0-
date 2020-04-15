@@ -1,4 +1,4 @@
-var cellSize = 50;
+var cellSize;
 var cells = [];
 var borderColor;
 var visitedColor;
@@ -18,8 +18,8 @@ function setup() {
     document.body.innerHTML = `<canvas id="myCanvas" width="${canvasWidht}" height="${canvasHeight}"></canvas>`;
     canvas = document.getElementById('myCanvas');
     ctx = canvas.getContext('2d');
-    cellCountRow = canvas.width / cellSize;
-    cellCountColumn = canvas.height / cellSize;
+    cellCountRow = canvasWidht / cellSize;
+    cellCountColumn = canvasHeight / cellSize;
 
     // Initiate colors
     ctx.strokeStyle = borderColor;
@@ -35,15 +35,14 @@ function setup() {
 
     // Initiate current cell
     currentCell = cells[0];
-    setInterval(draw, 200);
+    setInterval(draw, intervalTime);
 }
 
 function initAllVariableAndSetup() {
-    selectedAlgorithm = document.getElementById('algorithm').value ? document.getElementById('algorithm').value : 0;
     borderColor = '' + document.getElementById('border-color').value;
     visitedColor = '' + document.getElementById('visited-color').value;
     currentColor = '' + document.getElementById('current-color').value;
-    cellSize = document.getElementById('cell-size').value ? document.getElementById('cell-size').value : 50;
+    cellSize = 50;
     canvasWidht = document.getElementById('map-width').value ? document.getElementById('map-width').value : 500;
     canvasHeight = document.getElementById('map-height').value ? document.getElementById('map-height').value : 500;
     intervalTime = document.getElementById('interval-time').value ? document.getElementById('interval-time').value : 200;

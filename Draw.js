@@ -4,15 +4,7 @@ function draw() {
     currentCellHighlighter(currentCell);
 
     currentCell.visited = true;
-    var next = currentCell.getNextCell();
-    if (next) {
-        stack.push(currentCell);
-        next.visited = true;
-        removeWalls(currentCell, next);
-        currentCell = next;
-    } else if (stack.length > 0) {
-        currentCell = stack.pop();
-    }
+    algo();
 }
 
 function currentCellHighlighter(current) {
@@ -38,10 +30,16 @@ function removeWalls(current, next) {
         current.walls[3] = false;
         next.walls[1] = false;
     }
+    console.log('--------------');
+    console.log(current.y);
+    console.log(next.y);
+    console.log(current.x);
+    console.log(next.x);
 }
 
 function drawLine(pointStart, pointEnd) {
     ctx.beginPath();
+    ctx.lineWidth = 5;
     ctx.moveTo(pointStart.x, pointStart.y);
     ctx.lineTo(pointEnd.x, pointEnd.y);
     ctx.stroke();
