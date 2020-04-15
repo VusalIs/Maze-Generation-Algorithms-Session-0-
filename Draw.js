@@ -4,7 +4,7 @@ function draw() {
     currentCellHighlighter(currentCell);
 
     currentCell.visited = true;
-    algo();
+    // algo() we will call our maze generation algorithm here
 }
 
 function currentCellHighlighter(current) {
