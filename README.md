@@ -12,7 +12,7 @@ This repository is the first part of Maze Generation Algorithms and will explain
 Probably, all of us have heard about Mazes, but If we want to create different mazes every time how we can implement them. This session will help you to create baseline for your maze generation application. Actually, we can assume a maze as a graph or tree, that is why algorithms which we will use have different purposes but we will use them to create our random maze. I have created an environment which consists of 4 files, and will describe each of them in this session. Let's get started.
 
 -   [index.html](#index.html)
--   [Setup.js](#Setup.js)
+-   [Setup.js](#Setup\.js)
 -   [Draw.js](#Draw.js)
 -   [Cell.js](#Cell.js)
 -   [Thanks for your attention](#Thanks-for-your-attention)
