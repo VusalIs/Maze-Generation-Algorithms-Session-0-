@@ -4,7 +4,8 @@
 
 This repository is the first part of Maze Generation Algorithms and will explain base folder structure and code. I have following algorithms implemented:
 
--   [Depth First Search with Backtracking]()
+-   [Depth First Search with Backtracking](https://github.com/VusalIs/Maze-Generation-Algorithms-Session-1-)
+- [Randomized Kruskal's Algorithm](https://github.com/VusalIs/Maze-Generation-Algorithms-Session-2-)
 
 # What is Maze Generation Algorithms?
 
