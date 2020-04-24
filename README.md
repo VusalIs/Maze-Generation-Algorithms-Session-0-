@@ -11,17 +11,17 @@ This repository is the first part of Maze Generation Algorithms and will explain
 
 Probably, all of us have heard about Mazes, but If we want to create different mazes every time how we can implement them. This session will help you to create baseline for your maze generation application. Actually, we can assume a maze as a graph or tree, that is why algorithms which we will use have different purposes but we will use them to create our random maze. I have created an environment which consists of 4 files, and will describe each of them in this session. Let's get started.
 
--   [index.html](#index.html)
--   [Setup.js](#Setup\.js)
--   [Draw.js](#Draw.js)
--   [Cell.js](#Cell.js)
+-   [index.html](#index-file)
+-   [Setup.js](#Setup-file)
+-   [Draw.js](#Draw-file)
+-   [Cell.js](#Cell-file)
 -   [Thanks for your attention](#Thanks-for-your-attention)
 
-# index.html
+# index file
 
 index.html file is our main file to show everything to the user, that is why it only contains visualization of input data. In this file, I specified default values and which values user can customize. When you click the `Generate your maze` button, it calls `initAllVariableAndSetup()` function which is located in `Setup.js` file.
 
-# Setup.js
+# Setup file
 
 In `Setup.js` we have 2 main functions - initAllVariableAndSetup() and setup(). initAllVariableAndSetup() function helps us initiate all global variables which we have taken from user.
 
@@ -64,7 +64,7 @@ setInterval(draw, intervalTime);
 
 In the first 5 lines, we just initiate our canvas(width, height, count of cells per row and colum). We divide everything to cells because it will be easy to work with. Every square when you will see in the first stage is one cell. After canvas initiation, we have to create our cells. Cells will store x and y values and implementation can be found in `Cell.js`. After pushing everything to `cells` variable, we call every cell and set its neighbors. We use one dimensional array, that is why we don't know any top, right, bottom, and left neighbors of this cell and we have to set them. Other 2 lines, initiate our starting point with the first cell and call `draw`(can be found in `Draw.js`) function with given interval.
 
-# Cell.js
+# Cell file
 
 We create instances for every cell with this function. This file stores all information about one cell. After initiating x and y, we also initiate corner points of the cell. I think, It helps us a lot in the following lines.
 
@@ -115,7 +115,7 @@ this.show = function () {
 
 `walls` array stores which walls should be visible by user. It is border of the cell and current cell has passed from this wall that means, It has to be invisible by user. The sequence of walls is the same with `neighbors` array (from top to left). `show` function is called in `draw()` function and defines which walls should be drawn. Also if this cell has been already visited, we should draw it as a visited cell.
 
-# Draw.js
+# Draw file
 
 This file contains our main `draw()` function which is called every interval time, and other helper functions.
 
